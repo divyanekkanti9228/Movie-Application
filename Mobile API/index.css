@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 20px;
+}
+
+header {
+    background-color: #1c1c1c;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: darkgrey;
+}
+
+.search-container {
+    display: flex;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    width: 100%;
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.movie {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.movie:hover {
+    transform: scale(1.05);
+}
+
+.movie img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie .movie-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.movie .movie-info h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.movie .movie-info span {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.movie .overview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.5;
+    overflow: auto;
+}
+.movie:hover .overview {
+    display: block;
+}
+.search {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.search input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.search button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search button:hover {
+background-color: #ff0a16;
+}
+
+
+.error {
+color: red;
+margin-top: 20px;
+font-size: 16px;
+}
